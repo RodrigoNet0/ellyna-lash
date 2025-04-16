@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://images.unsplash.com/photo-1603461597691-6ba5f6a86a5d?auto=format&fit=crop&w=1400&q=80")
+      no-repeat center center/cover;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: #ffc0cb;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffc0cb;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 40px;
+  background: url("https://blog.hanabeauty.com.br/wp-content/uploads/2021/12/Modelo-com-extensao-de-cilios.jpeg")
+    no-repeat center center/cover;
+  background-blend-mode: darken;
+}
+
+.hero h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  color: #ffc0cb;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: #ffc0cb;
+  color: #000;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.hero button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.galeria {
+  text-align: center;
+  padding: 50px 20px;
+  background: #eeaeca;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(250, 116, 252, 1) 100%
+  );
+}
+
+.galeria h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: #ffc0cb;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000000aa;
+  color: #ffc0cb;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.prev:hover,
+.next:hover {
+  background: #ffc0cb;
+  color: #000;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  color: #ccc;
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 15px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .galeria h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 10px 10px 0 0;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .galeria h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .galeria h2 {
+    font-size: 24px;
+  }
+}
+
+.servicos {
+  padding: 40px 20px;
+  background: #eeaeca;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(250, 116, 252, 1) 100%
+  );
+  text-align: center;
+}
+
+.servicos h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#tabela-servicos {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 800px;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#tabela-servicos th,
+#tabela-servicos td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+#tabela-servicos th {
+  background-color: #f7d6e0;
+  color: #333;
+}
+
+#tabela-servicos td {
+  color: #e98c9cd7; 
+}
+
+#tabela-servicos tr:last-child td {
+  border-bottom: none;
+}
+
+
+@media (max-width: 768px) {
+  #tabela-servicos td,
+  #tabela-servicos th {
+    font-size: 14px;
+  }
+
+  #tabela-servicos {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+
+.whatsapp-btn {
+  background-color: #25D366; 
+  color: white;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px; 
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E; 
+  animation: pulse 1.5s infinite;
+}
+
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Animação de pulso */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    padding: 15px 30px; 
+    font-size: 18px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-btn {
+    padding: 12px 25px; 
+    font-size: 16px; 
+  }
+}
+
